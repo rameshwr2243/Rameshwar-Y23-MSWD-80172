@@ -1,5 +1,4 @@
 import React from 'react';
-
 const User = ({ username, userType }) => {
   return (
     <div>
@@ -9,5 +8,4 @@ const User = ({ username, userType }) => {
     </div>
   );
 };
-
 export default User;

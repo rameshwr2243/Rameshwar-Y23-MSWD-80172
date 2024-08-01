@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Faculty from './components/Faculty';
 import Student from './components/Student';
 import Courses from './components/Courses';
-import Assignments from './components/Assignments';
+import Assignments from './components/Assignments.js';
 import User from './components/User';
 import Timetable from './components/Timetable';
 
