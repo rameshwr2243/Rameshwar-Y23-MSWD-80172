@@ -1,36 +1,64 @@
-// src/components/TimeTable.js
 import React from 'react';
 
-const TimeTable = () => {
-  // Define class schedule for each day
-  const timetable = {
-    Monday: ['MSWD', 'CTOD', 'DSS', 'AI&ML'],
-    Tuesday: ['RAIT', 'DAV', 'IPE', 'CTOD'],
-    Wednesday: ['DSS', 'AI&ML', 'CTOD', 'MSWD'],
-    Thursday: ['DAV', 'AI&ML', 'RAIT', 'DSS'],
-    Friday: ['IPE', 'DAV', 'CTOD', 'MSWD'],
+const Timetable = () => {
+  // Timetable data
+  const timetableData = {
+    Monday: {
+      '9:20 - 11:20': 'DSS',
+      '11:20 - 1:20': 'DAV',
+      '1:20 - 3:20': 'AI&ML',
+      '3:20 - 5:20': 'MSWD',
+    },
+    Tuesday: {
+      '9:20 - 11:20': 'RAIT',
+      '11:20 - 1:20': 'DSS',
+      '1:20 - 3:20': 'DAV',
+      '3:20 - 5:20': 'AI&ML',
+    },
+    Wednesday: {
+      '9:20 - 11:20': 'MSWD',
+      '11:20 - 1:20': 'RAIT',
+      '1:20 - 3:20': 'DSS',
+      '3:20 - 5:20': 'DAV',
+    },
+    Thursday: {
+      '9:20 - 11:20': 'AI&ML',
+      '11:20 - 1:20': 'MSWD',
+      '1:20 - 3:20': 'RAIT',
+      '3:20 - 5:20': 'DSS',
+    },
+    Friday: {
+      '9:20 - 11:20': 'DAV',
+      '11:20 - 1:20': 'AI&ML',
+      '1:20 - 3:20': 'MSWD',
+      '3:20 - 5:20': 'RAIT',
+    },
   };
 
-  const times = ['9:20 - 11:20', '11:20 - 12:50', '1:40 - 3:30', '3:40 - 5:20'];
+  // Timings (columns)
+  const times = ['9:20 - 11:20', '11:20 - 1:20', '1:20 - 3:20', '3:20 - 5:20'];
+  const days = Object.keys(timetableData);
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.title}>Time Table</h2>
+      <h2>Timetable</h2>
       <table style={styles.table}>
         <thead>
           <tr>
-            <th style={styles.th}>Day</th>
-            {times.map((time, index) => (
-              <th key={index} style={styles.th}>{time}</th>
+            <th style={styles.tableHeader}>Day</th>
+            {times.map((time) => (
+              <th key={time} style={styles.tableHeader}>{time}</th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {Object.entries(timetable).map(([day, classes], index) => (
-            <tr key={index}>
-              <td style={styles.td}>{day}</td>
-              {classes.map((className, idx) => (
-                <td key={idx} style={styles.td}>{className}</td>
+          {days.map((day) => (
+            <tr key={day}>
+              <td style={styles.tableCell}>{day}</td>
+              {times.map((time) => (
+                <td key={time} style={styles.tableCell}>
+                  {timetableData[day][time] || 'No Class'}
+                </td>
               ))}
             </tr>
           ))}
@@ -42,27 +70,24 @@ const TimeTable = () => {
 
 const styles = {
   container: {
-    margin: '20px', // Margin around the container
-    textAlign: 'center', // Center the title
-  },
-  title: {
-    marginBottom: '20px', // Space below the title
+    margin: '20px',
+    textAlign: 'center',
   },
   table: {
     width: '100%',
     borderCollapse: 'collapse',
-    margin: '0 auto', // Center the table
+    marginTop: '20px',
   },
-  th: {
-    border: '1px solid #ddd',
+  tableHeader: {
+    backgroundColor: '#007bff',
+    color: 'white',
     padding: '10px',
-    textAlign: 'left',
-    backgroundColor: '#f2f2f2', // Header background color
+    border: '1px solid #ccc',
   },
-  td: {
-    border: '1px solid #ddd',
+  tableCell: {
     padding: '10px',
+    border: '1px solid #ccc',
   },
 };
 
-export default TimeTable;
+export default Timetable;

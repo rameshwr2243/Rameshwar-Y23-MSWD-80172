@@ -1,4 +1,3 @@
-// src/components/Footer.js
 import React from 'react';
 
 const Footer = () => {
@@ -11,14 +10,13 @@ const Footer = () => {
 
 const styles = {
   footer: {
+    backgroundColor: 'silver',
+    padding: '10px',
+    textAlign: 'center',
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#f1f1f1',
-    textAlign: 'center',
-    padding: '10px',
-    borderTop: '1px solid #ddd',
   },
 };
 

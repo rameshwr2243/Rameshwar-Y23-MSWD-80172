@@ -1,11 +1,11 @@
 import React from 'react';
 
-const User = ({ name, type }) => {
+const User = ({ username, userType }) => {
   return (
     <div>
-      <h3>
-        Name of the user {name} logged in as {type}
-      </h3>
+      <h2>User Info</h2>
+      <p>Logged in as: {username}</p>
+      <p>User Type: {userType}</p>
     </div>
   );
 };
