@@ -19,5 +19,4 @@ const Assignments = () => {
     </div>
   );
 };
-
 export default Assignments;
