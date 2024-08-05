@@ -2,8 +2,8 @@ import React from 'react';
 
 const Courses = () => {
   const courses = [
-    { code: 'CS101', name: 'Introduction to Computer Science', ltps: '3-1-0', credits: 3 },
-    { code: 'MA101', name: 'Calculus I', ltps: '3-1-0', credits: 3 },
+    { code: '23CS06EF', name: 'MERN STACK', ltps: '0-2-3-0', credits: 4 },
+    { code: '23ADSD01', name: 'AI & ML', ltps: '0-3-1-0', credits: 4 },
   ];
 
   return (
@@ -19,5 +19,4 @@ const Courses = () => {
     </div>
   );
 };
-
 export default Courses;

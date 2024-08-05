@@ -4,9 +4,11 @@ import Footer from './components/Footer';
 import Faculty from './components/Faculty';
 import Student from './components/Student';
 import Courses from './components/Courses';
-import Assignments from './components/Assignments.js';
+import Assignments from './components/Assignments';
 import User from './components/User';
 import Timetable from './components/Timetable';
+import Feedback from './components/Feedback'; // Import Feedback
+import './App.css';
 
 const App = () => {
   const [activeComponent, setActiveComponent] = useState('');
@@ -32,6 +34,8 @@ const App = () => {
         return <Assignments />;
       case 'Timetable':
         return <Timetable />;
+      case 'Feedback': // Add case for Feedback
+        return <Feedback />;
       default:
         return null;
     }
@@ -54,6 +58,7 @@ const App = () => {
         <button style={styles.button} onClick={() => setActiveComponent('Courses')}>Courses</button>
         <button style={styles.button} onClick={() => setActiveComponent('Assignments')}>Assignments</button>
         <button style={styles.button} onClick={() => setActiveComponent('Timetable')}>Timetable</button>
+        <button style={styles.button} onClick={() => setActiveComponent('Feedback')}>Feedback</button> {/* Add button for Feedback */}
       </div>
       <div style={styles.componentContainer}>
         {renderComponent()}

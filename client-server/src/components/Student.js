@@ -2,11 +2,11 @@ import React from 'react';
 
 const Student = () => {
   const studentDetails = [
-    { id: 'S001', name: 'Alice', branch: 'Computer Science', year: '2nd' },
-    { id: 'S002', name: 'Bob', branch: 'Mechanical', year: '3rd' },
-    { id: 'S003', name: 'Charlie', branch: 'Electrical', year: '1st' },
-    { id: 'S004', name: 'David', branch: 'Civil', year: '4th' },
-    { id: 'S005', name: 'Eve', branch: 'Chemical', year: '2nd' },
+    { id: '2300035001', name: 'ANEESH', branch: 'Computer Science', year: '2ND' },
+    { id: '2300035172', name: 'KARTHIK', branch: 'ECE', year: '2ND' },
+    { id: '2300080172', name: 'RAM', branch: 'Electrical', year: '2ND' },
+    { id: '2300035364', name: 'AMAR', branch: 'Civil', year: '4ND' },
+    { id: '23000353256', name: 'AMAN', branch: 'Chemical', year: '2ND' },
   ];
 
   return (

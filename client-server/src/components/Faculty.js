@@ -2,9 +2,9 @@ import React from 'react';
 
 const Faculty = () => {
   const facultyDetails = [
-    { id: 'F101', name: 'Dr. John Doe', designation: 'Professor', department: 'Computer Science' },
-    { id: 'F102', name: 'Dr. Jane Smith', designation: 'Associate Professor', department: 'Physics' },
-    { id: 'F103', name: 'Dr. Emily Johnson', designation: 'Assistant Professor', department: 'Mathematics' },
+    { id: '1023', name: 'Dr. MOHAN', designation: 'Professor', department: 'Computer Science' },
+    { id: '3125', name: 'Dr. PRASAD', designation: 'Associate Professor', department: 'ECE' },
+    { id: '9256', name: 'Dr. MITHRA', designation: 'Assistant Professor', department: 'AI&DS' },
   ];
 
   return (

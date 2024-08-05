@@ -2,8 +2,8 @@ import React from 'react';
 
 const Assignments = () => {
   const assignments = [
-    { dueDate: '2024-08-05', subject: 'Mathematics', year: '2nd', marks: 10 },
-    { dueDate: '2024-08-06', subject: 'Physics', year: '2nd', marks: 15 },
+    { dueDate: '2024-08-05', subject: 'RAIT', year: '2nd', marks: 10 },
+    { dueDate: '2024-08-06', subject: 'MERN', year: '2nd', marks: 15 },
   ];
 
   return (
