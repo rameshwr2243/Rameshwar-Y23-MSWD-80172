@@ -7,8 +7,8 @@ import Courses from './components/Courses';
 import Assignments from './components/Assignments';
 import User from './components/User';
 import Timetable from './components/Timetable';
-import Feedback from './components/Feedback'; // Import Feedback
-import './App.css';
+import Feedback from './components/Feedback';
+import './App.js';
 
 const App = () => {
   const [activeComponent, setActiveComponent] = useState('');

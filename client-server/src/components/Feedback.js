@@ -1,4 +1,3 @@
-// src/components/Feedback.js
 import React, { useState } from 'react';
 
 const feedbackData = [
